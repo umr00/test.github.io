@@ -10,12 +10,12 @@
 <div id="uploadArea">
 <input id="uploadFile" name="image" type="file" />
 </div>
-  $("#uploadFile").change(function() {
+<script>
+  function canvasDraw (evt){
     var canvas = $("#myCanvas");
-    var ctx = canvas[0].getContext("2d");
+    var file = evt.target.files
 
     // 選択されたファイルを取得
-    var file = this.files[0];
 
     // 画像ファイル以外は処理中止
     if (!file.type.match(/^image\/(png|jpeg|gif)$/)) return;
@@ -38,5 +38,6 @@
     // ファイルを読み込み、データをBase64でエンコードされたデータURLにして返す
     reader.readAsDataURL(file);
   });
+</script>
 
 </html>
