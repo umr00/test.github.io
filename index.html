@@ -10,7 +10,6 @@
 <div id="uploadArea">
 <input id="uploadFile" name="image" type="file" />
 </div>
-<script>
   $("#uploadFile").change(function() {
     var canvas = $("#myCanvas");
     var ctx = canvas[0].getContext("2d");
@@ -39,6 +38,5 @@
     // ファイルを読み込み、データをBase64でエンコードされたデータURLにして返す
     reader.readAsDataURL(file);
   });
-</script>
 
 </html>
