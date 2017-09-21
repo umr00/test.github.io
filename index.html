@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 </head>
+
+<div id="drawArea">
+<canvas id="myCanvas" width="300" height="300"></canvas>
+</div>
+<div id="uploadArea">
+<input id="uploadFile" name="image" type="file" />
+</div>
 <script>
   $("#uploadFile").change(function() {
     var canvas = $("#myCanvas");
@@ -33,12 +40,5 @@
     reader.readAsDataURL(file);
   });
 </script>
-<div id="drawArea">
-<canvas id="myCanvas" width="300" height="300"></canvas>
-</div>
-<div id="uploadArea">
-<input id="uploadFile" name="image" type="file" />
-</div>
-
 
 </html>
